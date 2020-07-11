@@ -1,5 +1,7 @@
 package New.Git.Practice;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *
@@ -8,11 +10,22 @@ public class App
 {
     public static void main( String[] args )
     {
-
-        System.out.println( "This is my First JAVA code for git" );
-<<<<<<< HEAD
-        System.out.println(" Let's make our score better!");
-=======
->>>>>>> dfd162c052c71bcfeb5b147cc555d2115a15ea1e
+        Scanner in = new Scanner(System.in);
+        int H = in.nextInt();
+        int M = in.nextInt();
+        in.close();
+        if(M<45)
+        {
+            H--;
+            M=M+15;
+            if(H<0)
+            {
+                H=23;
+            }
+            System.out.println(H+" "+M);
+        }
+        else{
+            System.out.println(H+" "+(M-45));
+        }
     }
 }

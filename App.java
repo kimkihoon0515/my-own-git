@@ -8,24 +8,17 @@ import java.util.Scanner;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[]args)
     {
         Scanner in = new Scanner(System.in);
-        int H = in.nextInt();
-        int M = in.nextInt();
+        int a;
+        a=in.nextInt();
         in.close();
-        if(M<45)
+        int result;
+        for(int i=1;i<10;i++)
         {
-            H--;
-            M=M+15;
-            if(H<0)
-            {
-                H=23;
-            }
-            System.out.println(H+" "+M);
-        }
-        else{
-            System.out.println(H+" "+(M-45));
+            result = a *i;
+            System.out.println(a+"*"+i+"="+result);
         }
     }
 }
